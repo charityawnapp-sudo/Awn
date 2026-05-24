@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN - Bahrain Charities Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="animate-fade-in">
+    <header>
+        <div class="container header-container">
+            <a href="#section-0" class="logo">
+                <div class="logo-image-container">
+                    <img id="logoImage" src="" alt="AWN Logo" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">AWN</div>
+                    <div class="logo-tagline"></div>
+                </div>
+                <div> </div>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks"></ul>
+        </div>
+    </header>
+
+    <div class="control-panel">
+        <div class="control-item">
+            <button class="control-btn" id="langBtn" title="Language"><i class="fas fa-globe"></i></button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="#" class="lang-option" data-lang="en"><i class="fas fa-language"></i><span>English</span></a>
+                <a href="#" class="lang-option" data-lang="ar"><i class="fas fa-language"></i><span>العربية</span></a>
+            </div>
+        </div>
+        <div class="control-item"><button class="control-btn" id="themeToggle" title="Dark Mode"><i class="fas fa-moon"></i></button></div>
+        <div class="control-item"><button class="control-btn" id="aiAssistantBtn" title="AI Assistant"><i class="fas fa-robot"></i></button></div>
+        <div class="control-item"><button class="control-btn" id="scrollTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button></div>
+    </div>
+
+    <div class="ai-assistant-popup" id="aiAssistantPopup">
+        <div class="ai-popup-header">
+            <h3 id="aiAssistantTitle"></h3>
+            <button class="ai-close-btn" id="aiCloseBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-chat-body" id="aiChatBody"></div>
+        <div class="ai-chat-input">
+            <input type="text" class="ai-input-field" id="aiInput" autocomplete="off">
+            <button class="ai-send-btn" id="aiSendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <main id="appSections"></main>
+    <footer id="appFooter"></footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

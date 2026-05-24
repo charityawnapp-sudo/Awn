@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN Document Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="document-styles.css">
+</head>
+<body>
+    <div class="document-header">
+        <div class="header-left">
+            <a id="backButton" href="#" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span id="backButtonText"></span>
+            </a>
+            <div class="document-title">
+                <i class="fas fa-file-pdf"></i>
+                <span id="documentTitle"></span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="page-controls">
+                <button class="page-btn" id="firstPageBtn"><i class="fas fa-fast-backward"></i></button>
+                <button class="page-btn" id="prevPageBtn"><i class="fas fa-chevron-left"></i></button>
+                <span class="page-info" id="pageInfo"><span id="currentPage">1</span> <span id="pageOfText"></span> <span id="totalPages">1</span></span>
+                <button class="page-btn" id="nextPageBtn"><i class="fas fa-chevron-right"></i></button>
+                <button class="page-btn" id="lastPageBtn"><i class="fas fa-fast-forward"></i></button>
+            </div>
+
+            <div class="zoom-controls">
+                <button class="page-btn" id="zoomOutBtn"><i class="fas fa-search-minus"></i></button>
+                <span class="zoom-level" id="zoomLevel">130%</span>
+                <button class="page-btn" id="zoomInBtn"><i class="fas fa-search-plus"></i></button>
+            </div>
+
+            <button class="action-button fullscreen-btn" id="fullscreenBtn">
+                <i class="fas fa-expand"></i>
+                <span id="fullscreenText"></span>
+            </button>
+
+            <a id="downloadButton" href="#" download class="action-button">
+                <i class="fas fa-download"></i>
+                <span id="downloadText"></span>
+            </a>
+
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="loading-container" id="loadingContainer">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText"></div>
+        <div class="loading-progress"><div class="loading-bar"></div></div>
+    </div>
+
+    <div class="error-container" id="errorContainer">
+        <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h2 class="error-title" id="errorTitle"></h2>
+        <p class="error-message" id="errorMessage"></p>
+        <button class="retry-button" id="retryButton">
+            <i class="fas fa-redo"></i>
+            <span id="retryText"></span>
+        </button>
+    </div>
+
+    <div class="document-container">
+        <div class="pdf-viewer-container" id="pdfContainer">
+            <div class="pdf-pages-container" id="pdfPagesContainer"></div>
+        </div>
+    </div>
+
+    <div class="document-info" id="documentInfo">
+        <div class="document-icon">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <div>
+            <div class="document-name" id="documentName"></div>
+            <div class="document-size" id="documentSize"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="data.js"></script>
+    <script src="document-viewer.js"></script>
+</body>
+</html>
